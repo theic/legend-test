@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "5efb02be-23f7-4f6e-a388-4a7284bb483a",
+		"name": "LC_JSON_REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add new task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"One very important task.\",\n\t\"priority\": 50\n}"
+				},
+				"url": {
+					"raw": "{{TEST_URL}}/add",
+					"host": [
+						"{{TEST_URL}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{TEST_URL}}/delete/:id",
+					"host": [
+						"{{TEST_URL}}"
+					],
+					"path": [
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get priority task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TEST_URL}}/task",
+					"host": [
+						"{{TEST_URL}}"
+					],
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "02f73e7e-3752-4f06-90b5-40d666b1b823",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f068981f-2304-4e26-8c5a-58c301107a4a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "747d49ae-1fc4-4917-b6f9-3cd4677a44c1",
+			"key": "TEST_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

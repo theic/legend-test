@@ -7,9 +7,21 @@
     "target": "es6",
     "outDir": "./dist",
     "baseUrl": "./src",
-    "lib": ["es5", "dom", "esnext.asynciterable", "es2015"],
-    "types": ["jest", "node"]
+    "lib": [
+      "es5",
+      "dom",
+      "esnext.asynciterable",
+      "es2015"
+    ],
+    "types": [
+      "jest",
+      "node"
+    ]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
